@@ -1,0 +1,17 @@
+#include<stdio.h>
+void display(int satrt,int end);
+int main()
+{
+	int i,j;
+	scanf("%d%d",&i,&j);
+	display(i,j);
+	return 0;
+}
+void display(int start,int end)
+{
+	if(start>end)
+	return;
+	else
+	printf("%d\n",start);
+	display(start+1,end);
+}
