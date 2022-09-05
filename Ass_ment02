@@ -1,0 +1,22 @@
+#include<stdio.h>
+void display(int a[],int satrt,int end);
+int main()
+{
+	int i,j,l;
+	scanf("%d",&i);
+	int a[i];
+	for(j=0;j<i;j++)
+	scanf("%d",&a[j]);
+	l=i-1;
+	display(a,0,l);
+	return 0;
+}
+void display(int a[],int start,int end)
+{
+	if(start>end)
+	return;
+	else
+	printf("%d\t",a[start]);
+	start++;
+	display(a,start,end);
+}
